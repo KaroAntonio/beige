@@ -25,7 +25,6 @@ $('#content').click(function(e){
 })
 
 $('#content').mousemove(function(e){
-	console.log(e.clientX);
 	next_line(e);
 })
 
