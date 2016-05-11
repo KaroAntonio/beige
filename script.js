@@ -6,6 +6,8 @@ var gif_i = 0,
 var poems,
     poem_titles;
 
+var last = null;
+
 gif_names = [
 	'consume',
 	'hunt',
@@ -14,7 +16,6 @@ gif_names = [
 	'heart',
 	'formation',
     ]
-
 
 $('#content').click(function(e){
     //line = next_line(e)
@@ -49,6 +50,9 @@ function next_line(e) {
     var line = poems[poem_titles[poem_i]][line_i];
 	var new_div = $('<div class="line"><a href="http://www.'+line+'.com">'+line+'</a></div>');
 	$('#content').append(new_div);
+	if (last != null) last.removeClass('last');
+	last = new_div;
+	new_div.addClass('last');
     line_i++;
 	new_div.css('left',(e.clientX - 10) + "px")
 	new_div.css('top',(e.clientY - 30) + "px")

@@ -25,6 +25,13 @@ a {
     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; 
 }
 
+a:hover {
+}
+
+.last {
+	background-color: white;
+}
+
 .line {
 	position: absolute;
 }
