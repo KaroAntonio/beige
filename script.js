@@ -25,9 +25,6 @@ $('#content').click(function(e){
 		*/
 })
 
-$('#content').mousemove(function(e){
-	next_line(e);
-})
 
 $('#info_button').click(function(){
     if ($('#info').css('visibility') == 'hidden') {
@@ -44,6 +41,9 @@ $.getJSON( "assets/lines.json", function( data ) {
     poems = data;
     poem_titles = Object.keys(poems);
 	var a = 0;
+	$('#content').mousemove(function(e){
+		next_line(e);
+	})
  });
 
 function next_line(e) {
